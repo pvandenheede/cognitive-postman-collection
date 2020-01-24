@@ -5,8 +5,6 @@ Therefore I created it myself. Here you will find a [Postman](https://www.getpos
 
 Take a look below as to see what is in this collection.
 
-Feel free to open an issue if you have any questions or remarks.
-
 ## Vision
 - **Computer Vision**
   - Tag image
@@ -29,10 +27,10 @@ Feel free to open an issue if you have any questions or remarks.
   - Face grouping (TODO)
   - Face identification (TODO)
   
-  This collection is subject to change. 
-  Next steps will be to add the other services as well, next to the image, text and sound files as well.
-  
-  ## Contributing
+This collection is subject to change. 
+Next steps will be to add the other services as well, next to the image, text and sound files as well.
+
+## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/PVandenheede/cognitive-postman-collection. This project is intended to be a safe, welcoming space for collaboration. Stay friendly.
 
