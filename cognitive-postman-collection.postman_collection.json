@@ -1,0 +1,1599 @@
+{
+	"info": {
+		"_postman_id": "2fa357d6-28f4-475a-a392-6f040d1ff8fd",
+		"name": "Cognitive Services Demoes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Vision",
+			"item": [
+				{
+					"name": "Computer Vision",
+					"item": [
+						{
+							"name": "01a Tag Image - URL",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"value": "{{APIKey1}}",
+										"type": "text"
+									},
+									{
+										"warning": "Value contains invalid newline characters.",
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"url\": \"https://raw.githubusercontent.com/PVandenheede/cognitive-postman-collection/master/media/vision/computervision/01a.jpg?token=ABJERIFAYM3EKTUTBPLDAQ26FLHM4\"\r\n}"
+								},
+								"url": {
+									"raw": "https://westeurope.api.cognitive.microsoft.com/vision/v2.0/tag",
+									"protocol": "https",
+									"host": [
+										"westeurope",
+										"api",
+										"cognitive",
+										"microsoft",
+										"com"
+									],
+									"path": [
+										"vision",
+										"v2.0",
+										"tag"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "01b Tag Image - Binary",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"type": "text",
+										"value": "{{APIKey1}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/octet-stream",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "file",
+									"file": {
+										"src": "/C:/Users/PieterVandenheede/OneDrive/Pictures/TODO/GSM Ilse 2/2018-11-07 17.14.26.jpg"
+									}
+								},
+								"url": {
+									"raw": "https://westeurope.api.cognitive.microsoft.com/vision/v2.0/tag",
+									"protocol": "https",
+									"host": [
+										"westeurope",
+										"api",
+										"cognitive",
+										"microsoft",
+										"com"
+									],
+									"path": [
+										"vision",
+										"v2.0",
+										"tag"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "02a Detect Objects - URL",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"type": "text",
+										"value": "{{APIKey1}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json",
+										"warning": "Value contains invalid newline characters."
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"url\": \"https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/images/windows-kitchen.jpg\"\r\n}"
+								},
+								"url": {
+									"raw": "https://westeurope.api.cognitive.microsoft.com/vision/v2.0/detect?visualFeatures=Objects",
+									"protocol": "https",
+									"host": [
+										"westeurope",
+										"api",
+										"cognitive",
+										"microsoft",
+										"com"
+									],
+									"path": [
+										"vision",
+										"v2.0",
+										"detect"
+									],
+									"query": [
+										{
+											"key": "visualFeatures",
+											"value": "Objects"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "02b Detect Objects - Binary",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"type": "text",
+										"value": "{{APIKey1}}"
+									},
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/octet-stream"
+									}
+								],
+								"body": {
+									"mode": "file",
+									"file": {
+										"src": "/C:/Users/PieterVandenheede/OneDrive/Pictures/TODO/GSM Ilse 2/2018-12-21 20.19.41.jpg"
+									}
+								},
+								"url": {
+									"raw": "https://westeurope.api.cognitive.microsoft.com/vision/v2.0/detect",
+									"protocol": "https",
+									"host": [
+										"westeurope",
+										"api",
+										"cognitive",
+										"microsoft",
+										"com"
+									],
+									"path": [
+										"vision",
+										"v2.0",
+										"detect"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "03 Brand Detection - URL",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"type": "text",
+										"value": "{{APIKey1}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json",
+										"warning": "Value contains invalid newline characters."
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"url\": \"https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/images/red-shirt-logo.jpg\"\r\n}"
+								},
+								"url": {
+									"raw": "https://westeurope.api.cognitive.microsoft.com/vision/v2.0/analyze?visualFeatures=Brands",
+									"protocol": "https",
+									"host": [
+										"westeurope",
+										"api",
+										"cognitive",
+										"microsoft",
+										"com"
+									],
+									"path": [
+										"vision",
+										"v2.0",
+										"analyze"
+									],
+									"query": [
+										{
+											"key": "visualFeatures",
+											"value": "Brands"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "04 Image categorization . URL",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"type": "text",
+										"value": "{{APIKey1}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json",
+										"warning": "Value contains invalid newline characters."
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"url\": \"https://i.imgur.com/D64XT4s.jpg\"\r\n}"
+								},
+								"url": {
+									"raw": "https://westeurope.api.cognitive.microsoft.com/vision/v2.0/analyze?visualFeatures=Categories ",
+									"protocol": "https",
+									"host": [
+										"westeurope",
+										"api",
+										"cognitive",
+										"microsoft",
+										"com"
+									],
+									"path": [
+										"vision",
+										"v2.0",
+										"analyze"
+									],
+									"query": [
+										{
+											"key": "visualFeatures",
+											"value": "Categories "
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "05 Image Description -  URL",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"type": "text",
+										"value": "{{APIKey1}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json",
+										"warning": "Value contains invalid newline characters."
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"url\": \"https://i.imgur.com/D64XT4s.jpg\"\r\n}"
+								},
+								"url": {
+									"raw": "https://westeurope.api.cognitive.microsoft.com/vision/v2.0/analyze?visualFeatures=Description ",
+									"protocol": "https",
+									"host": [
+										"westeurope",
+										"api",
+										"cognitive",
+										"microsoft",
+										"com"
+									],
+									"path": [
+										"vision",
+										"v2.0",
+										"analyze"
+									],
+									"query": [
+										{
+											"key": "visualFeatures",
+											"value": "Description "
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "06 Face detection - URL",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"type": "text",
+										"value": "{{APIKey1}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json",
+										"warning": "Value contains invalid newline characters."
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"url\": \"https://media.wired.com/photos/5d0ad4d4b88726006ef655f4/master/pass/Mind%20Grenades%20-%20Fake%20Faces%202.jpg\"\r\n}"
+								},
+								"url": {
+									"raw": "https://westeurope.api.cognitive.microsoft.com/vision/v2.0/analyze?visualFeatures=Faces",
+									"protocol": "https",
+									"host": [
+										"westeurope",
+										"api",
+										"cognitive",
+										"microsoft",
+										"com"
+									],
+									"path": [
+										"vision",
+										"v2.0",
+										"analyze"
+									],
+									"query": [
+										{
+											"key": "visualFeatures",
+											"value": "Faces"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "07 Image Type Detection - URL",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"type": "text",
+										"value": "{{APIKey1}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json",
+										"warning": "Value contains invalid newline characters."
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"url\": \"https://i.pinimg.com/originals/84/5a/11/845a11fb8c7f73862f22c9aeb92f4030.png\"\r\n}"
+								},
+								"url": {
+									"raw": "https://westeurope.api.cognitive.microsoft.com/vision/v2.0/analyze?visualFeatures=ImageType",
+									"protocol": "https",
+									"host": [
+										"westeurope",
+										"api",
+										"cognitive",
+										"microsoft",
+										"com"
+									],
+									"path": [
+										"vision",
+										"v2.0",
+										"analyze"
+									],
+									"query": [
+										{
+											"key": "visualFeatures",
+											"value": "ImageType"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "08 Domain-specific content - List Models",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"type": "text",
+										"value": "{{APIKey1}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json",
+										"warning": "Value contains invalid newline characters."
+									}
+								],
+								"url": {
+									"raw": "https://westeurope.api.cognitive.microsoft.com/vision/v2.0/models",
+									"protocol": "https",
+									"host": [
+										"westeurope",
+										"api",
+										"cognitive",
+										"microsoft",
+										"com"
+									],
+									"path": [
+										"vision",
+										"v2.0",
+										"models"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "08 Domain-specific content - Celebrities",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"type": "text",
+										"value": "{{APIKey1}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json",
+										"warning": "Value contains invalid newline characters."
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"url\": \"https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/images/satya.jpeg\"\r\n}"
+								},
+								"url": {
+									"raw": "https://westeurope.api.cognitive.microsoft.com/vision/v2.0/models/celebrities/analyze?language=en",
+									"protocol": "https",
+									"host": [
+										"westeurope",
+										"api",
+										"cognitive",
+										"microsoft",
+										"com"
+									],
+									"path": [
+										"vision",
+										"v2.0",
+										"models",
+										"celebrities",
+										"analyze"
+									],
+									"query": [
+										{
+											"key": "language",
+											"value": "en"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "08 Domain-specific content - Landmarks",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"type": "text",
+										"value": "{{APIKey1}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json",
+										"warning": "Value contains invalid newline characters."
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"url\": \"https://www.listchallenges.com/f/items/a45acde9-68c5-4871-b49c-0a630890076b.jpg\"\r\n}"
+								},
+								"url": {
+									"raw": "https://westeurope.api.cognitive.microsoft.com/vision/v2.0/models/landmarks/analyze?language=en",
+									"protocol": "https",
+									"host": [
+										"westeurope",
+										"api",
+										"cognitive",
+										"microsoft",
+										"com"
+									],
+									"path": [
+										"vision",
+										"v2.0",
+										"models",
+										"landmarks",
+										"analyze"
+									],
+									"query": [
+										{
+											"key": "language",
+											"value": "en"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "09 Color scheme detection - URL",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"type": "text",
+										"value": "{{APIKey1}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json",
+										"warning": "Value contains invalid newline characters."
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"url\": \"https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/images/cheese_clipart.png\"\r\n}"
+								},
+								"url": {
+									"raw": "https://westeurope.api.cognitive.microsoft.com/vision/v2.0/analyze?visualFeatures=Color",
+									"protocol": "https",
+									"host": [
+										"westeurope",
+										"api",
+										"cognitive",
+										"microsoft",
+										"com"
+									],
+									"path": [
+										"vision",
+										"v2.0",
+										"analyze"
+									],
+									"query": [
+										{
+											"key": "visualFeatures",
+											"value": "Color"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "10 Smart cropped thumbnails - URL",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"type": "text",
+										"value": "{{APIKey1}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json",
+										"warning": "Value contains invalid newline characters."
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"url\": \"https://i.imgur.com/tkIg4sg.jpg\"\r\n}"
+								},
+								"url": {
+									"raw": "https://westeurope.api.cognitive.microsoft.com/vision/v2.0/generateThumbnail?width=100&height=300&smartCropping=true",
+									"protocol": "https",
+									"host": [
+										"westeurope",
+										"api",
+										"cognitive",
+										"microsoft",
+										"com"
+									],
+									"path": [
+										"vision",
+										"v2.0",
+										"generateThumbnail"
+									],
+									"query": [
+										{
+											"key": "width",
+											"value": "100"
+										},
+										{
+											"key": "height",
+											"value": "300"
+										},
+										{
+											"key": "smartCropping",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "11 Recognize Text – Read API - Call (Page)",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"type": "text",
+										"value": "{{APIKey1}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json",
+										"warning": "Value contains invalid newline characters."
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"url\": \"http://www.silveriowritings.com/images/Book-of-the-hut-introduction-page-2.jpg\"\r\n}"
+								},
+								"url": {
+									"raw": "https://westeurope.api.cognitive.microsoft.com/vision/v2.0/read/core/asyncBatchAnalyze?detectOrientation=true",
+									"protocol": "https",
+									"host": [
+										"westeurope",
+										"api",
+										"cognitive",
+										"microsoft",
+										"com"
+									],
+									"path": [
+										"vision",
+										"v2.0",
+										"read",
+										"core",
+										"asyncBatchAnalyze"
+									],
+									"query": [
+										{
+											"key": "detectOrientation",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "11 Recognize Text – Read API - Get Result (Page)",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"type": "text",
+										"value": "{{APIKey1}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://westeurope.api.cognitive.microsoft.com/vision/v2.0/read/operations/be03d4fe-0ebd-48c4-82ea-f4fd1297f9c1",
+									"protocol": "https",
+									"host": [
+										"westeurope",
+										"api",
+										"cognitive",
+										"microsoft",
+										"com"
+									],
+									"path": [
+										"vision",
+										"v2.0",
+										"read",
+										"operations",
+										"be03d4fe-0ebd-48c4-82ea-f4fd1297f9c1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "11 Recognize Text – Read API - Call (Handwriting 1)",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"type": "text",
+										"value": "{{APIKey1}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json",
+										"warning": "Value contains invalid newline characters."
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"url\": \"https://i.imgur.com/xnV2os3.jpg\"\r\n}"
+								},
+								"url": {
+									"raw": "https://westeurope.api.cognitive.microsoft.com/vision/v2.0/read/core/asyncBatchAnalyze",
+									"protocol": "https",
+									"host": [
+										"westeurope",
+										"api",
+										"cognitive",
+										"microsoft",
+										"com"
+									],
+									"path": [
+										"vision",
+										"v2.0",
+										"read",
+										"core",
+										"asyncBatchAnalyze"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "11 Recognize Text – Read API - Get Result (Handwriting 1)",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"type": "text",
+										"value": "{{APIKey1}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://westeurope.api.cognitive.microsoft.com/vision/v2.0/read/operations/be03d4fe-0ebd-48c4-82ea-f4fd1297f9c1",
+									"protocol": "https",
+									"host": [
+										"westeurope",
+										"api",
+										"cognitive",
+										"microsoft",
+										"com"
+									],
+									"path": [
+										"vision",
+										"v2.0",
+										"read",
+										"operations",
+										"be03d4fe-0ebd-48c4-82ea-f4fd1297f9c1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "11 Recognize Text – Read API - Call (Handwriting 2)",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"type": "text",
+										"value": "{{APIKey1}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json",
+										"warning": "Value contains invalid newline characters."
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"url\": \"https://images.unsplash.com/photo-1575536849638-56107d953c41?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80\"\r\n}"
+								},
+								"url": {
+									"raw": "https://westeurope.api.cognitive.microsoft.com/vision/v2.0/read/core/asyncBatchAnalyze",
+									"protocol": "https",
+									"host": [
+										"westeurope",
+										"api",
+										"cognitive",
+										"microsoft",
+										"com"
+									],
+									"path": [
+										"vision",
+										"v2.0",
+										"read",
+										"core",
+										"asyncBatchAnalyze"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "11 Recognize Text – Read API - Get Result (Handwriting 2)",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"type": "text",
+										"value": "{{APIKey1}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://westeurope.api.cognitive.microsoft.com/vision/v2.0/read/operations/c588fcbf-89ca-4100-b6d4-0158e6aefebd",
+									"protocol": "https",
+									"host": [
+										"westeurope",
+										"api",
+										"cognitive",
+										"microsoft",
+										"com"
+									],
+									"path": [
+										"vision",
+										"v2.0",
+										"read",
+										"operations",
+										"c588fcbf-89ca-4100-b6d4-0158e6aefebd"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "11 Recognize Text – OCR API",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"type": "text",
+										"value": "{{APIKey1}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json",
+										"warning": "Value contains invalid newline characters."
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"url\": \"https://i.imgur.com/rbQyLoD.png\"\r\n}"
+								},
+								"url": {
+									"raw": "https://westeurope.api.cognitive.microsoft.com/vision/v2.0/ocr?language=unk&detectOrientation=false",
+									"protocol": "https",
+									"host": [
+										"westeurope",
+										"api",
+										"cognitive",
+										"microsoft",
+										"com"
+									],
+									"path": [
+										"vision",
+										"v2.0",
+										"ocr"
+									],
+									"query": [
+										{
+											"key": "language",
+											"value": "unk"
+										},
+										{
+											"key": "detectOrientation",
+											"value": "false"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "12 Detect adult content - Clean",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"type": "text",
+										"value": "{{APIKey1}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json",
+										"warning": "Value contains invalid newline characters."
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"url\": \"https://images.unsplash.com/photo-1575157951566-b6f6e1f51ca6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1420&q=80\"\r\n}"
+								},
+								"url": {
+									"raw": "https://westeurope.api.cognitive.microsoft.com/vision/v2.0/analyze?visualFeatures=Adult",
+									"protocol": "https",
+									"host": [
+										"westeurope",
+										"api",
+										"cognitive",
+										"microsoft",
+										"com"
+									],
+									"path": [
+										"vision",
+										"v2.0",
+										"analyze"
+									],
+									"query": [
+										{
+											"key": "visualFeatures",
+											"value": "Adult"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "12 Detect adult content - Suggestive",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"type": "text",
+										"value": "{{APIKey1}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json",
+										"warning": "Value contains invalid newline characters."
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"url\": \"https://images.unsplash.com/photo-1542994419-6ce2d65bea12?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80\"\r\n}"
+								},
+								"url": {
+									"raw": "https://westeurope.api.cognitive.microsoft.com/vision/v2.0/analyze?visualFeatures=Adult",
+									"protocol": "https",
+									"host": [
+										"westeurope",
+										"api",
+										"cognitive",
+										"microsoft",
+										"com"
+									],
+									"path": [
+										"vision",
+										"v2.0",
+										"analyze"
+									],
+									"query": [
+										{
+											"key": "visualFeatures",
+											"value": "Adult"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Custom Vision",
+					"item": [
+						{
+							"name": "Custom Vision - STFC Prediction Iteration 4",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Prediction-Key",
+										"type": "text",
+										"value": "{{APIKey1}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "file",
+									"file": {
+										"src": "/C:/Users/PieterVandenheede/OneDrive/Pictures/Camera Roll/Screenshot_20200122-003807.png"
+									}
+								},
+								"url": {
+									"raw": "https://westeurope.api.cognitive.microsoft.com/customvision/v3.0/Prediction/acd8bf4c-d973-4d74-b1c7-960c95b37635/detect/iterations/Iteration4/image",
+									"protocol": "https",
+									"host": [
+										"westeurope",
+										"api",
+										"cognitive",
+										"microsoft",
+										"com"
+									],
+									"path": [
+										"customvision",
+										"v3.0",
+										"Prediction",
+										"acd8bf4c-d973-4d74-b1c7-960c95b37635",
+										"detect",
+										"iterations",
+										"Iteration4",
+										"image"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Face",
+					"item": [
+						{
+							"name": "01a Face detection - Man",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"type": "text",
+										"value": "{{APIKey1}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json",
+										"warning": "Value contains invalid newline characters."
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"url\": \"https://mediaproxy.salon.com/width/1200/height/1200/https://media.salon.com/2019/04/suprised-man.jpg\"\r\n}"
+								},
+								"url": {
+									"raw": "https://westeurope.api.cognitive.microsoft.com/face/v1.0/detect?returnFaceId=true&returnFaceLandmarks=false&returnFaceAttributes=age,gender,headPose,smile,facialHair,glasses,emotion,hair,makeup,occlusion,accessories,blur,exposure,noise&recognitionModel=recognition_01&returnRecognitionModel=false&detectionModel=detection_01&returnAge=true",
+									"protocol": "https",
+									"host": [
+										"westeurope",
+										"api",
+										"cognitive",
+										"microsoft",
+										"com"
+									],
+									"path": [
+										"face",
+										"v1.0",
+										"detect"
+									],
+									"query": [
+										{
+											"key": "returnFaceId",
+											"value": "true"
+										},
+										{
+											"key": "returnFaceLandmarks",
+											"value": "false"
+										},
+										{
+											"key": "returnFaceAttributes",
+											"value": "age,gender,headPose,smile,facialHair,glasses,emotion,hair,makeup,occlusion,accessories,blur,exposure,noise"
+										},
+										{
+											"key": "recognitionModel",
+											"value": "recognition_01"
+										},
+										{
+											"key": "returnRecognitionModel",
+											"value": "false"
+										},
+										{
+											"key": "detectionModel",
+											"value": "detection_01"
+										},
+										{
+											"key": "returnAge",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "01b Face detection - Woman",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"type": "text",
+										"value": "{{APIKey1}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json",
+										"warning": "Value contains invalid newline characters."
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"url\": \"https://images0.persgroep.net/rcs/RGFQzqaYvjm-D0vBTkK-oPW5eoM/diocontent/154223135/_fitwidth/763?appId=2dc96dd3f167e919913d808324cbfeb2&quality=0.8\"\r\n}"
+								},
+								"url": {
+									"raw": "https://westeurope.api.cognitive.microsoft.com/face/v1.0/detect?returnFaceId=true&returnFaceLandmarks=false&returnFaceAttributes=age,gender,headPose,smile,facialHair,glasses,emotion,hair,makeup,occlusion,accessories,blur,exposure,noise&recognitionModel=recognition_01&returnRecognitionModel=false&detectionModel=detection_01&returnAge=true",
+									"protocol": "https",
+									"host": [
+										"westeurope",
+										"api",
+										"cognitive",
+										"microsoft",
+										"com"
+									],
+									"path": [
+										"face",
+										"v1.0",
+										"detect"
+									],
+									"query": [
+										{
+											"key": "returnFaceId",
+											"value": "true"
+										},
+										{
+											"key": "returnFaceLandmarks",
+											"value": "false"
+										},
+										{
+											"key": "returnFaceAttributes",
+											"value": "age,gender,headPose,smile,facialHair,glasses,emotion,hair,makeup,occlusion,accessories,blur,exposure,noise"
+										},
+										{
+											"key": "recognitionModel",
+											"value": "recognition_01"
+										},
+										{
+											"key": "returnRecognitionModel",
+											"value": "false"
+										},
+										{
+											"key": "detectionModel",
+											"value": "detection_01"
+										},
+										{
+											"key": "returnAge",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "01c Face detection - Glasses",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"type": "text",
+										"value": "{{APIKey1}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json",
+										"warning": "Value contains invalid newline characters."
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"url\": \"https://i.pinimg.com/originals/82/0b/cb/820bcbc21d5de45e1e12d8ec4c4b117c.jpg\"\r\n}"
+								},
+								"url": {
+									"raw": "https://westeurope.api.cognitive.microsoft.com/face/v1.0/detect?returnFaceId=true&returnFaceLandmarks=false&returnFaceAttributes=age,gender,headPose,smile,facialHair,glasses,emotion,hair,makeup,occlusion,accessories,blur,exposure,noise&recognitionModel=recognition_01&returnRecognitionModel=false&detectionModel=detection_01&returnAge=true",
+									"protocol": "https",
+									"host": [
+										"westeurope",
+										"api",
+										"cognitive",
+										"microsoft",
+										"com"
+									],
+									"path": [
+										"face",
+										"v1.0",
+										"detect"
+									],
+									"query": [
+										{
+											"key": "returnFaceId",
+											"value": "true"
+										},
+										{
+											"key": "returnFaceLandmarks",
+											"value": "false"
+										},
+										{
+											"key": "returnFaceAttributes",
+											"value": "age,gender,headPose,smile,facialHair,glasses,emotion,hair,makeup,occlusion,accessories,blur,exposure,noise"
+										},
+										{
+											"key": "recognitionModel",
+											"value": "recognition_01"
+										},
+										{
+											"key": "returnRecognitionModel",
+											"value": "false"
+										},
+										{
+											"key": "detectionModel",
+											"value": "detection_01"
+										},
+										{
+											"key": "returnAge",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "02 Face Verification - Detect Face 1",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"type": "text",
+										"value": "{{APIKey1}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json",
+										"warning": "Value contains invalid newline characters."
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"url\": \"https://mediaproxy.salon.com/width/1200/height/1200/https://media.salon.com/2019/04/suprised-man.jpg\"\r\n}"
+								},
+								"url": {
+									"raw": "https://westeurope.api.cognitive.microsoft.com/face/v1.0/detect?returnFaceId=true&returnFaceLandmarks=false&recognitionModel=recognition_01&returnRecognitionModel=false&detectionModel=detection_01&returnAge=true",
+									"protocol": "https",
+									"host": [
+										"westeurope",
+										"api",
+										"cognitive",
+										"microsoft",
+										"com"
+									],
+									"path": [
+										"face",
+										"v1.0",
+										"detect"
+									],
+									"query": [
+										{
+											"key": "returnFaceId",
+											"value": "true"
+										},
+										{
+											"key": "returnFaceLandmarks",
+											"value": "false"
+										},
+										{
+											"key": "returnFaceAttributes",
+											"value": "age,gender,headPose,smile,facialHair,glasses,emotion,hair,makeup,occlusion,accessories,blur,exposure,noise",
+											"disabled": true
+										},
+										{
+											"key": "recognitionModel",
+											"value": "recognition_01"
+										},
+										{
+											"key": "returnRecognitionModel",
+											"value": "false"
+										},
+										{
+											"key": "detectionModel",
+											"value": "detection_01"
+										},
+										{
+											"key": "returnAge",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "02 Face Verification - Detect Face 2",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"type": "text",
+										"value": "{{APIKey1}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json",
+										"warning": "Value contains invalid newline characters."
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"url\": \"https://images0.persgroep.net/rcs/RGFQzqaYvjm-D0vBTkK-oPW5eoM/diocontent/154223135/_fitwidth/763?appId=2dc96dd3f167e919913d808324cbfeb2&quality=0.8\"\r\n}"
+								},
+								"url": {
+									"raw": "https://westeurope.api.cognitive.microsoft.com/face/v1.0/detect?returnFaceId=true&returnFaceLandmarks=false&recognitionModel=recognition_01&returnRecognitionModel=false&detectionModel=detection_01&returnAge=true",
+									"protocol": "https",
+									"host": [
+										"westeurope",
+										"api",
+										"cognitive",
+										"microsoft",
+										"com"
+									],
+									"path": [
+										"face",
+										"v1.0",
+										"detect"
+									],
+									"query": [
+										{
+											"key": "returnFaceId",
+											"value": "true"
+										},
+										{
+											"key": "returnFaceLandmarks",
+											"value": "false"
+										},
+										{
+											"key": "returnFaceAttributes",
+											"value": "age,gender,headPose,smile,facialHair,glasses,emotion,hair,makeup,occlusion,accessories,blur,exposure,noise",
+											"disabled": true
+										},
+										{
+											"key": "recognitionModel",
+											"value": "recognition_01"
+										},
+										{
+											"key": "returnRecognitionModel",
+											"value": "false"
+										},
+										{
+											"key": "detectionModel",
+											"value": "detection_01"
+										},
+										{
+											"key": "returnAge",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "02 Face Verification - Verify",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"type": "text",
+										"value": "{{APIKey1}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json",
+										"warning": "Value contains invalid newline characters."
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"faceId1\": \"28d40e83-e0a4-4b62-8a56-af8844e92fb4\",\r\n  \"faceId2\": \"0f73c863-6d63-46c5-8aec-7e0e71091a42\"\r\n}"
+								},
+								"url": {
+									"raw": "https://westeurope.api.cognitive.microsoft.com/face/v1.0/verify",
+									"protocol": "https",
+									"host": [
+										"westeurope",
+										"api",
+										"cognitive",
+										"microsoft",
+										"com"
+									],
+									"path": [
+										"face",
+										"v1.0",
+										"verify"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Language",
+			"item": [
+				{
+					"name": " Text Analytics API (v2.1) - Key Phrases",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Ocp-Apim-Subscription-Key",
+								"value": "{{APIKey1}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"documents\": [\n    {\n      \"language\": \"en\",\n      \"id\": \"1\",\n      \"text\": \"Introduction to Azure: Welcome to Cloud Computing!\n\n• Introduction to Azure Cognitive Services\n\n• A look at Vision: Computer Vision, Image Classification and Face Recognition\n\n• Let's talk about Speech: Speech to Text and Speaker Recognition\n\n• Understanding Language: Real-time translation, LUIS and Bots\n\n• Exploring Search: Azure Cognitive Search\n\n• Getting results with Decision: Anomaly detection and Content Moderation\n\n• Container support in Cognitive Services\n\nWe are working with our partner Zure to deliver this workshop. Zure is a lean cloud development and consulting company, focusing on Azure since 2011. In 2019, Microsoft recognized Zure as global Finalist in the Application Innovation category of the Partner of the Year Awards.\"\n    }\n  ]\n}"
+						},
+						"url": {
+							"raw": "https://westeurope.api.cognitive.microsoft.com/text/analytics/v2.1/keyPhrases?showStats=true",
+							"protocol": "https",
+							"host": [
+								"westeurope",
+								"api",
+								"cognitive",
+								"microsoft",
+								"com"
+							],
+							"path": [
+								"text",
+								"analytics",
+								"v2.1",
+								"keyPhrases"
+							],
+							"query": [
+								{
+									"key": "showStats",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
