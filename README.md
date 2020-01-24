@@ -28,7 +28,7 @@ Take a look below as to see what is in this collection.
   - Face identification (TODO)
   
 This collection is subject to change. 
-Next steps will be to add the other services as well, next to the image, text and sound files as well.
+Next steps will be to add the other services as well, next to the image, text and sound files.
 
 ## Contributing
 
