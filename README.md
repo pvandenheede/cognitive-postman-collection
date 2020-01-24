@@ -19,7 +19,7 @@ Take a look below as to see what is in this collection.
   - Smart Cropped Thumbnails
   - Recognize Text
   - Detect Adult Content
-- **Custom Visio** **(NOT INCLUDED)**
+- **Custom Vision** **(NOT INCLUDED)**
 - **Face**
   - Face Detection
   - Face Verification
