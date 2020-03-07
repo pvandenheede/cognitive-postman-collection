@@ -1076,60 +1076,6 @@
 					"_postman_isSubFolder": true
 				},
 				{
-					"name": "Custom Vision",
-					"item": [
-						{
-							"name": "Custom Vision - STFC Prediction Iteration 4",
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Prediction-Key",
-										"type": "text",
-										"value": "{{APIKey1}}"
-									},
-									{
-										"key": "Content-Type",
-										"name": "Content-Type",
-										"type": "text",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "file",
-									"file": {
-										"src": "/C:/Users/PieterVandenheede/OneDrive/Pictures/Camera Roll/Screenshot_20200122-003807.png"
-									}
-								},
-								"url": {
-									"raw": "https://westeurope.api.cognitive.microsoft.com/customvision/v3.0/Prediction/acd8bf4c-d973-4d74-b1c7-960c95b37635/detect/iterations/Iteration4/image",
-									"protocol": "https",
-									"host": [
-										"westeurope",
-										"api",
-										"cognitive",
-										"microsoft",
-										"com"
-									],
-									"path": [
-										"customvision",
-										"v3.0",
-										"Prediction",
-										"acd8bf4c-d973-4d74-b1c7-960c95b37635",
-										"detect",
-										"iterations",
-										"Iteration4",
-										"image"
-									]
-								}
-							},
-							"response": []
-						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
-				},
-				{
 					"name": "Face",
 					"item": [
 						{
