@@ -5,6 +5,8 @@ Therefore I created it myself. Here you will find a [Postman](https://www.getpos
 
 Take a look below as to see what is in this collection.
 
+Note: This is a WIP.
+
 ## Vision
 - **Computer Vision**
   - Tag image
